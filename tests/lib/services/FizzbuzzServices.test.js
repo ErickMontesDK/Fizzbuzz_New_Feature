@@ -22,4 +22,25 @@ describe("Verificar funcionamiento de FizzbuzzService",()=>{
 
         expect(explorer.trick).toEqual(scoreSend.score);
     });
+
+    test("5-Si el number enviado es divisible de 5 y 3, explorer.trick=\"FIZZBUZZ\"",()=>{
+        const trick=FizzbuzzService.applyValidationInNumber(15);
+
+        expect(trick).toBe("FIZZBUZZ");
+    });
+    test("6-Si el number enviado es divisible de 3, explorer.trick=\"FIZZ\"",()=>{
+        const trick=FizzbuzzService.applyValidationInNumber(9);
+
+        expect(trick).toBe("FIZZ");
+    });
+    test("7-Si el number enviado es divisible de 5, explorer.trick=\"BUZZ\"",()=>{
+        const trick=FizzbuzzService.applyValidationInNumber(10);
+
+        expect(trick).toBe("BUZZ");
+    });
+    test("8-Si el number enviado no es divisible de 5 o 3, explorer.trick=explorer.score",()=>{
+        const trick=FizzbuzzService.applyValidationInNumber(2);
+
+        expect(trick).toEqual(2);
+    });
 });

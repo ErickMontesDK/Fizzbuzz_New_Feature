@@ -23,4 +23,16 @@ describe("ExplorerController envía la data requerida",() =>{
 
         expect(numberExplorers).toEqual(filteredlistExplorers.length);
     });
+
+    test("4-Regresa valor trick dependiendo del score enviado",()=>{
+        const trickScore5=ExplorerController.getScoreNumber(5);
+        const trickScore3=ExplorerController.getScoreNumber(3);
+        const trickScore5n3=ExplorerController.getScoreNumber(15);
+        const trickScoreOther=ExplorerController.getScoreNumber(2);
+
+        expect(trickScore5).toBe("BUZZ");
+        expect(trickScore3).toBe("FIZZ");
+        expect(trickScore5n3).toBe("FIZZBUZZ");
+        expect(trickScoreOther).toBe(2);
+    });
 });
