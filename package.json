@@ -1,0 +1,30 @@
+{
+  "name": "fizzbuzz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
+    "linter": "node ./node_modules/eslint/bin/eslint.js .",
+    "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix",
+    "server": "node ./lib/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErickMontesDK/Fizzbuzz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErickMontesDK/Fizzbuzz/issues"
+  },
+  "homepage": "https://github.com/ErickMontesDK/Fizzbuzz#readme",
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "jest": "^28.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.0"
+  }
+}
